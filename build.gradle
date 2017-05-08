@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.4.0-alpha7'
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+
+    project.ext {
+        compileSdkVersion = 25
+        buildToolsVersion = '25.0.2'
+        marvelPublicKey = 'a7646320e23bab3f2ea29e01b0c56485'
+        marvelPrivateKey = '9e3cd80edfbd5bd457923882333de171bf1a7b51'
+
+        junitVersion = '4.12'
+        mockitoVersion = '2.7.22'
+        powermockVersion = '1.6.6'
+        espressoVersion = '2.2.2'
+        testRunnerVersion = '0.5'
+
+        supportLibraryVersion = '25.3.1'
+        supportContrainstLayout = '1.0.2'
+        playServicesVersion = '10.2.4'
+        leakCanaryVersion = '1.5'
+
+        retrofitVersion = '2.2.0'
+        okhttpLoggerVersion = '3.7.0'
+        picassoVersion = '2.5.2'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
