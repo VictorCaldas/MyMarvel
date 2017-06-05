@@ -26,7 +26,8 @@ android {
             minifyEnabled false
             applicationIdSuffix '.debug'
             versionNameSuffix '-DEBUG'
-            // Enable for ui-testing: // Enable for ui-testing: http://stackoverflow.com/questions/39195754/java-lang-noclassdeffounderror-failed-resolution-of-lorg-jacoco-agent-rt-inter
+            // Enable for ui-testing:
+            // Enable for ui-testing: http://stackoverflow.com/questions/39195754/java-lang-noclassdeffounderror-failed-resolution-of-lorg-jacoco-agent-rt-inter
 //            testCoverageEnabled true
         }
 
@@ -45,8 +46,11 @@ android {
 }
 
 dependencies {
-    debugCompile project(path: ':core', configuration: 'debug')
-    releaseCompile project(path: ':core', configuration: 'release')
+    implementation project(':core')
+
+    // erro causado na apresentação na RunRun.it - autalizacao da forma de migracao de depedencias solucionado com o codigo acima
+    // debugCompile project(path: ':core', configuration: 'debug')
+    // releaseCompile project(path: ':core', configuration: 'release')
     compile "com.android.support:design:$supportLibraryVersion"
     compile "com.squareup.picasso:picasso:$picassoVersion"
     compile "com.android.support:appcompat-v7:$supportLibraryVersion"

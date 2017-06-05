@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.4.0-alpha7'
+        classpath 'com.android.tools.build:gradle:3.0.0-alpha3'
 
     }
 }
@@ -30,7 +30,7 @@ allprojects {
         supportLibraryVersion = '25.3.1'
         supportContrainstLayout = '1.0.2'
         playServicesVersion = '10.2.4'
-        leakCanaryVersion = '1.5'
+        leakCanaryVersion = '1.5.1'
 
         retrofitVersion = '2.2.0'
         okhttpLoggerVersion = '3.7.0'
